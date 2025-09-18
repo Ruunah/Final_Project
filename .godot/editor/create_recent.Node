@@ -1,0 +1,7 @@
+RichTextLabel
+Button
+ColorRect
+Control
+CollisionShape2D
+CharacterBody2D
+StaticBody2D

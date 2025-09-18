@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://lhvgmsb2nyi7"]
+
+[ext_resource type="Script" uid="uid://tint0qoma330" path="res://Scripts/main_menu.gd" id="1_853f1"]
+[ext_resource type="FontFile" uid="uid://bkmhqcal5j3sw" path="res://Vfx/Fonts/Idk.ttf" id="1_tt5f1"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_853f1")
+
+[node name="Bg" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.00392157, 0.0862745, 0.152941, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 1024.0
+offset_bottom = 320.0
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+theme_override_font_sizes/normal_font_size = 100
+text = "Title whatever"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play_Button" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 368.0
+offset_right = 656.0
+offset_bottom = 464.0
+theme_override_fonts/font = ExtResource("1_tt5f1")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Quit_Button" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 512.0
+offset_right = 640.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("1_tt5f1")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="Play_Button" to="." method="start"]
+[connection signal="pressed" from="Quit_Button" to="." method="quit"]
